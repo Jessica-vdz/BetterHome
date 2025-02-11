@@ -16,17 +16,25 @@
             <header id="title">
                 <h1>Better Home</h1>
                 <figure>
-                    <img src="../Wireframe & logo/Untitled-2.png" alt="logo">
+                    <img src="../Wireframe & logo/Untitled-2.png" alt="logo" style="margin-left: 40px;">
                 </figure>
             </header>
-            <section class="maingrid">
+            <section id="content">
                 <article id="date">
-                    <h2>datum en tijd</h2>
+                    <h3 id="date1"></h3>
                 </article>
-            </section>
-            <aside>
-
-            </aside>
+                <article id="box" >
+                    <h4 id="grafiek">
+                        hier komt de grafiek
+                    </h4>
+                    <p id="slider">hier komt de slider</p>
+                </article>
+                <aside></aside>
+        </section>
         </main>
     </body>
+    <script>
+        const d = new Date();
+        document.getElementById("date1").innerHTML = d;
+        </script>
 </html>
