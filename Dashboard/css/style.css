@@ -2,6 +2,12 @@
     margin:0;
     padding:0;
 }
+main{
+    margin-top: 1rem;
+    background-color: #9DC7C8;
+    width: 100vw;
+    height: 100vh;
+}
 #title{
     font-size: xx-large;
     background-color:#33658A;
@@ -14,4 +20,8 @@
     justify-content: center;
     display: flex;
     border-radius: 40px;
+}
+.date{
+    display: grid;
+    grid-template-columns: auto;
 }
