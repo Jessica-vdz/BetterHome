@@ -1,0 +1,17 @@
+*{
+    margin:0;
+    padding:0;
+}
+#title{
+    font-size: xx-large;
+    background-color:#33658A;
+    color:#E1EFE6;
+    text-shadow:4px 2px #23425b;
+    width:80%;
+    height:auto;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 40px;
+}
