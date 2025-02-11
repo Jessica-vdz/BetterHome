@@ -14,7 +14,6 @@
         <title>Better Home</title>
     </head>
     <body>
-
         <nav role="navigation">
             <div id="menuToggle">
               <input type="checkbox" id="menuCheckbox" />
@@ -44,20 +43,29 @@
               </ul>
             </div>
           </nav>
-
-
-
         <header id="title">
             <h1>Better Home</h1>
             <figure>
                 <img src="../Wireframe & logo/Untitled-2.png" alt="logo">
             </figure>
         </header>
-        <section>
-
+        
+        <section id="content">
+            <article id="date">
+                <h3 id="date1"></h3>
+            </article>
+            <article id="box" >
+                <h4 id="grafiek">
+                    hier komt de grafiek
+                </h4>
+                <p id="slider">hier komt de slider</p>
+            </article>
+            <aside></aside>
         </section>
-        <aside>
-
-        </aside>
+        </main>
     </body>
+    <script>
+        const d = new Date();
+        document.getElementById("date1").innerHTML = d;
+    </script>
 </html>
