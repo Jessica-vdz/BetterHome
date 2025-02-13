@@ -8,7 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
          <!-- rest of head -->
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style.css" defer>
         <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
         <script src="../Dashboard/js/all.min.js"></script>
         <title>Better Home</title>
@@ -57,6 +57,20 @@
                 <h4>
                     hier komt de grafiek
                 </h4>
+                <div id="slider">
+                  <h3 class="lichten">Woonkamer:</h3>
+                  <div class="slidecontainer">
+                    <input type="range" min="0" max="100" value="0" class="slider" id="myRange">
+                  </div>
+                  <p>Value: <span id="demo"></span>%</p>
+                  <h3 class="lichten">Slaapkamer:</h3>
+                  <div class="slidecontainer">
+                    <input type="range" min="0" max="10" value="0" class="slider" id="myRange1">
+                  </div>
+                  <p>Value: <span id="demo1"></span>%</p>
+                </div>
+            </article>
+            <aside></aside>
               </section>
               <section class="boxstyle" id="slider">
                 <p>Hier komt de slider</p>
@@ -70,5 +84,25 @@
     <script>
         const d = new Date();
         document.getElementById("date1").innerHTML = d;
+
+        // Slider Woonkamer
+
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value;
+
+        slider.oninput = function() {
+          output.innerHTML = this.value;
+        }
+
+        // Slider Slaapkamer
+
+        var slider1 = document.getElementById("myRange1");
+        var output1 = document.getElementById("demo1");
+        output1.innerHTML = slider1.value;
+
+        slider1.oninput = function() {
+          output1.innerHTML = this.value*10;
+        }
     </script>
 </html>
