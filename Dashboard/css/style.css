@@ -6,89 +6,59 @@
 body{
     background-color: #9DC7C8;
 }
-
-main{
-    width: 80%;
-    height: auto;
-    display: flex;
-    flex-direction: column;  
-    align-items: center;
-    justify-content: flex-start; 
-    flex-wrap: wrap;
-    margin: auto;
+#content{
+  width: 80vw;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 352px 352px 295px 339px;
+  grid-template-rows: 140px 113px 103px 51px 249px 239px;
 }
-
 #title{
-    font-size: x-large;
-    padding:1rem;
-    margin: 25px auto 2rem;
-    display: flex;
-    background-color: #33658A;
-    color: #E1EFE6;
-    text-shadow: 4px 2px #23425b;
-    width: 80%;
-    height: fit-content;
-    align-items: center;
-    justify-content: center;
-    border-radius: 2rem;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  background-color: #2F4858;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  width:100%;
+  height: fit-content;
+  color:#E1EFE6;
+  font-size: xx-large;
+  padding: 1rem;
 }
+#date{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 2;
 
-#content {
-    display: flex;
-    border-radius: 40px;
-    flex-direction: column; 
-    align-items: start;
-    justify-content: space-evenly;
-    width: 100%;
-}
-
-h1{
-    font-family: "Chewy", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 3em;
-    margin-right:2rem ;
-}
-
-.lichten{
-  padding-left: 1em;
-}
-
-#box{
-    display: flex;
 }
 #grafiek{
-    margin-top: 2rem;
-    margin-left: 10rem;
-    margin-right: auto;
-    width: 20rem;
-    height:25rem;
-    border-radius: 1rem;
-    box-shadow: 1px 1px 5px #23425b;
-    background-color: #E1EFE6;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 6;
+  width: 20rem;
+  height: 25rem;
 }
 #slider{
-    width:35rem;
-    height:10rem;
-    border-radius: 1rem;
-    box-shadow: 1px 1px 5px #23425b;
-    align-self: flex-end;
-    justify-self: end;
-    margin-left: 2rem;
-    background-color: #E1EFE6;
+  margin-left: 4rem;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 5;
+  grid-row-end: 6;
+  width: 30rem;
+  height: 15rem;
 }
-
-#date{
-    background-color: #E1EFE6;
-    padding: 1rem;
-    margin-left: 10rem;
-    margin-right: auto;
-    border-radius: 1rem;
-    width: fit-content;
-    height: fit-content;
-    box-shadow: 1px 1px 5px #23425b;
-    align-self: flex-start;
-    color: #23425b;
+.boxstyle{
+  margin-top: 4rem;
+  background-color: #E1EFE6;
+  width: fit-content;
+  height: fit-content;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow:1px 1px #33658A;
 }
 
 /* Slider */
@@ -131,10 +101,6 @@ h1{
   background: #04AA6D;
   cursor: pointer;
 }
-
-/* streepjes voor de slider */
-
-
 
 /* Hamburger menu */
 
