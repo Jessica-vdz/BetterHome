@@ -1,144 +1,98 @@
-*{
+body {
+    background: #8C52FF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     margin: 0;
-    padding: 0;
-}
-@font-face{
-  font-family: "MyCustomFont";
-  src: url(./Chewy-Regular.ttf);
-}
-body{
-  font-family: "MyCustomFont", sans-serif;
-  letter-spacing: 2px;
-  background-color: #9DC7C8;
-}
-#content{
-  width: 80vw;
-  margin: 20px auto;
-  display: grid;
-  grid-template-columns: 352px 352px 295px 339px 330px;
-  grid-template-rows: 140px 113px 103px 51px 249px 239px;
-}
-#title{
-  grid-column-start: 1;
-  grid-column-end: 5;
-  background-color: #2F4858;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 1rem;
-  width:100%;
-  height: fit-content;
-  color:#E1EFE6;
-  font-size: xx-large;
-  padding: 1rem;
-  font-family: Chewy;
-  font-size: 4em;
-}
-#date{
-  margin-top: 5rem;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 2;
-
-}
-#grafiek{
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 3;
-  grid-row-end: 6;
-  width: 20rem;
-  height: 25rem;
-}
-#slider{
-  margin-left: 4rem;
-  grid-column-start: 2;
-  grid-column-end: 5;
-  grid-row-start: 5;
-  grid-row-end: 6;
-  width: 30rem;
-   
-}
-.tempslider{
-  height: 15rem;
-  background-color: #04AA6D;
-  grid-column-start: 4;
-  grid-column-end: 5;
-  grid-row-start: 4;
-  grid-row-end: 6;
-  padding:1rem;
 }
 
-.boxstyle{
-  margin-top: 4rem;
-  margin-bottom: 1rem;
-  background-color: #E1EFE6;
-  width: fit-content;
-  height: fit-content;
-  padding: 1rem;
-  border-radius: 1rem;
-  box-shadow:1px 1px #33658A;
+#weather-container {
+    background: rgba(255, 255, 255, 0.3);
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
 }
 
-/* Graph */
-
-.graph{
-  height: 10px;
-  width: 3px;
-  color: #232323;
+h2, label, p {
+    color: #fff;
+    margin: 8px 0;
 }
 
-/* Slider */
-
-.slidecontainer {
-  width: 100%;
-  margin-top: 0.5rem;
-}
-.sliderstyle{
-  margin: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+input {
+    width: calc(100% - 16px);
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid white;
+    margin-top: 20px;
 }
 
-.slider {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 15px;
-  border-radius: 5px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-  
+button {
+    background: #debff4;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100px;
+    font-size: 15px;
 }
 
-.slider:hover {
-  background-image: linear-gradient(-90deg, red, yellow);
-  opacity: 1;
+button:hover {
+    background: #8b48d7;
 }
 
-#kleurslider:hover{
-  background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+#temp-div p {
+    font-size: 60px;
+    margin-top: -30px;
 }
 
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #33658A;
-  cursor: pointer;
+#weather-info {
+    font-size: 20px;
 }
 
-.slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #04AA6D;
-  cursor: pointer;
+#weather-icon {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 10px; 
+    margin-bottom: 0;
+    display: none;
+}
+
+#hourly-forecast {
+    margin-top: 50px;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hourly-item {
+    flex: 0 0 auto;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    color: white;
+}
+
+.hourly-item img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+#hourly-heading {
+    color: #fff;
+    margin-top: 10px;
 }
 
 /* Hamburger menu */
@@ -167,7 +121,7 @@ body{
 
 #menuToggle a:hover
 {
-  color: #E1EFE6;
+  color: tomato;
 }
 
 
