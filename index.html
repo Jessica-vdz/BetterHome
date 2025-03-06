@@ -55,9 +55,7 @@
         <h3 id="date1"></h3>
       </section>
       <section class="boxstyle" id="grafiek">
-        <h4>
-          Here comes a graph
-        </h4>
+        <canvas id="myChart" height="400rem"></canvas>
         </article>
         <aside></aside>
         <span class="graph"></span>
@@ -128,5 +126,32 @@
     slider2.oninput = function () {
       output2.innerHTML = this.value;
     }
+  </script>
+  
+  <!-- chart -->
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+  <script>
+    const ctx = document.getElementById('myChart');
+  
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        datasets: [{
+          label: 'KW/H of usage this day',
+          data: [6, 3, 3, 5, 4, 8, 7],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
   </script>
 </html>
