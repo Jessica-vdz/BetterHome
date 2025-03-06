@@ -189,7 +189,7 @@ button:hover {
 }
 #wheater{
   text-align: center;
-  width: fit-content;
+  width: 40rem;
   border-radius: 20px;
   background-color: #5fa5a5;
   padding: 2rem;
@@ -233,6 +233,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   margin-right: 10px;
+  margin-bottom: 1rem;
   color: rgb(0, 0, 0);
 }
 
