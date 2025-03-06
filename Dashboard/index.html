@@ -16,37 +16,37 @@
 
   <body>
     <nav role="navigation">
-      <div id="menuToggle">
-        <input type="checkbox" id="menuCheckbox" />
+      <div class="menuToggle">
+        <input type="checkbox" class="menuCheckbox" />
         <span></span>
         <span></span>
         <span></span>
-        <ul id="menu">
+        <ul class="menu">
           <!-- 
                   We can use a label here to close upon click (when doing same page navigation), this
                   does require a slight bit of JS.
                   -->
           <li>
-            <a href="#">
-              <label for="menuCheckbox" onclick="this.parentNode.click();">Home</label>
+            <a href="./index.html">
+              <label for="menuCheckbox">Home</label>
             </a>
           </li>
           <li>
             <a href="#about">
-              <label for="menuCheckbox" onclick="this.parentNode.click();">Usage</label>
+              <label for="menuCheckbox">Usage</label>
             </a>
           </li>
-          <li><a href="./weather.html" target="_blank">Weather</a></li>
+          <li><a href="/../pages/weather.html">Weather</a></li>
           <li><label for="menuCheckbox"><a>Contact</a></label></li>
           <li>
-            <a href="https://erikterwan.com/" target="_blank">About us</a>
+            <a href="#">About us</a>
           </li>
         </ul>
       </div>
     </nav>
     <section id="content">
       <header id="title">
-        <h1>Better Home</h1>
+        <h1 id="title2">Better Home</h1>
         <figure>
           <img src="./Images/Untitled-2.png" alt="logo">
         </figure>

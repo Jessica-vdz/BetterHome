@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    
 }
 @font-face{
   font-family: "MyCustomFont";
@@ -9,7 +10,9 @@
 body{
   font-family: "MyCustomFont", sans-serif;
   letter-spacing: 2px;
-  background-color: #9DC7C8;
+  background-color: #bbe4dd;
+  color:#fff;
+  letter-spacing:1px;
 }
 #content{
   width: 80vw;
@@ -21,18 +24,20 @@ body{
 #title{
   grid-column-start: 1;
   grid-column-end: 5;
-  background-color: #2F4858;
+  background-color: #5fa5a5;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 1rem;
   width:100%;
   height: fit-content;
-  color:#E1EFE6;
-  font-size: xx-large;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black;
   padding: 1rem;
   font-family: Chewy;
-  font-size: 4em;
+  font-size: 2em;
+}
+#title2{
+  margin-right: 2rem;
 }
 #date{
   margin-top: 5rem;
@@ -70,14 +75,16 @@ body{
 }
 
 .boxstyle{
-  margin-top: 4rem;
+  margin-top: 3rem;
   margin-bottom: 1rem;
-  background-color: #E1EFE6;
+  background-color: #5fa5a5;
   width: fit-content;
   height: fit-content;
   padding: 1rem;
   border-radius: 1rem;
-  box-shadow:1px 1px #33658A;
+  box-shadow: 1px 1px 1px #457878;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black;
+  font-size: 18px;
 }
 
 /* Graph */
@@ -141,9 +148,108 @@ body{
   cursor: pointer;
 }
 
+#weather-container {
+  background: rgba(255, 255, 255, 0.3);
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+input {
+  width: calc(100% - 16px);
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 1px solid white;
+  margin-top: 20px;
+}
+
+button {
+  background: #518c8c;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100px;
+  font-size: 15px;
+}
+
+button:hover {
+  background: #33658A;
+}
+
+#temp-div p {
+  font-size: 60px;
+  margin-top: -30px;
+}
+#wheater{
+  text-align: center;
+  width: fit-content;
+  border-radius: 20px;
+  background-color: #5fa5a5;
+  padding: 2rem;
+}
+#weatherbox{
+  padding: 5rem;
+  display: flex;
+  height: 99%;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+#weather-info {
+  font-size: 20px;
+}
+
+#weather-icon {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 10px; 
+  margin-bottom: 0;
+  display: none;
+}
+
+#hourly-forecast {
+  margin-top: 50px;
+  overflow-x: auto;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hourly-item {
+  flex: 0 0 auto;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  color: rgb(0, 0, 0);
+}
+
+.hourly-item img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+
+#hourly-heading {
+  color: #000;
+  margin-top: 10px;
+}
+
 /* Hamburger menu */
 
-#menuToggle
+.menuToggle
 {
   display: block;
   /* You can also use relative/absolute here if you want to stay on the top */
@@ -157,7 +263,7 @@ body{
   user-select: none;
 }
 
-#menuToggle a
+.menuToggle a
 {
   text-decoration: none;
   color: #232323;
@@ -165,13 +271,13 @@ body{
   transition: color 0.3s ease;
 }
 
-#menuToggle a:hover
+.menuToggle a:hover
 {
   color: #E1EFE6;
 }
 
 
-#menuToggle input
+.menuToggle input
 {
   display: block;
   width: 40px;
@@ -191,7 +297,7 @@ body{
 /*
  * Just a quick hamburger
  */
-#menuToggle span
+.menuToggle span
 {
   display: block;
   width: 33px;
@@ -211,12 +317,12 @@ body{
               opacity 0.55s ease;
 }
 
-#menuToggle span:first-child
+.menuToggle span:first-child
 {
   transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2)
+.menuToggle span:nth-last-child(2)
 {
   transform-origin: 0% 100%;
 }
@@ -225,17 +331,16 @@ body{
  * Transform all the slices of hamburger
  * into a crossmark.
  */
-#menuToggle input:checked ~ span
+.menuToggle input:checked ~ span
 {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
 }
 
 /*
  * But let's hide the middle one.
  */
-#menuToggle input:checked ~ span:nth-last-child(3)
+.menuToggle input:checked ~ span:nth-last-child(3)
 {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
@@ -244,7 +349,7 @@ body{
 /*
  * Ohyeah and the last one should go the other direction
  */
-#menuToggle input:checked ~ span:nth-last-child(2)
+.menuToggle input:checked ~ span:nth-last-child(2)
 {
   transform: rotate(-45deg) translate(0, -1px);
 }
@@ -253,7 +358,7 @@ body{
  * Make this absolute positioned
  * at the top left of the screen
  */
-#menu
+.menu
 {
   position: absolute;
   max-width: 15vw;
@@ -265,24 +370,24 @@ body{
   padding-top: 125px;
   box-sizing: border-box;
   overflow-y: auto;
-  background: #2f4858da;
+  background: #5fa5a59d;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
-  
+
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
   
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
-#menu li
+.menu li
 {
   padding: 10px 0;
   font-size: 22px;
 }
 
-#menu li label
+.menu li label
 {
   cursor: pointer;
 }
@@ -290,7 +395,7 @@ body{
 /*
  * And let's slide it in from the left
  */
-#menuToggle input:checked ~ ul
+.menuToggle input:checked ~ ul
 {
   transform: none;
 }

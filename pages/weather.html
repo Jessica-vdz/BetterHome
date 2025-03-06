@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../Dashboard/css/style.css">
+    <title>Weather</title>
+    
+</head>
+<body>
+  <nav role="navigation">
+    <div class="menuToggle">
+      <input type="checkbox" class="menuCheckbox" />
+      <span></span>
+      <span></span>
+      <span></span>
+      <ul class="menu">
+        <!-- 
+                We can use a label here to close upon click (when doing same page navigation), this
+                does require a slight bit of JS.
+                -->
+        <li>
+          <a href="../Dashboard/index.html">
+            <label for="menuCheckbox">Home</label>
+          </a>
+        </li>
+        <li>
+          <a href="#about">
+            <label for="menuCheckbox">Usage</label>
+          </a>
+        </li>
+        <li><a href="./weather.html">Weather</a></li>
+        <li><label for="menuCheckbox"><a>Contact</a></label></li>
+        <li>
+          <a href="https://erikterwan.com/" target="_blank">About us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div id="weatherbox">
+    <div id="wheater">
+        <h2>Weather App</h2>
+        <input type="text" id="city" placeholder="Enter city">
+        <button onclick="getWeather()">Search</button>
+
+        <img id="weather-icon" alt="Weather Icon">
+
+        <div id="temp-div"></div>
+
+        <div id="weather-info"></div>
+
+        <div id="hourly-forecast"></div>
+    </div>
+  </div>
+    <script src="../Dashboard/js/weather.js"></script>
+</body>
+</html>
