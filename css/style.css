@@ -64,16 +64,48 @@ body{
   width: 30rem;
    
 }
-.tempslider{
-  height: 15rem;
-  background-color: #04AA6D;
-  grid-column-start: 4;
-  grid-column-end: 5;
-  grid-row-start: 4;
-  grid-row-end: 6;
-  padding:1rem;
+
+/* Slider container */
+.slider-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Circle slider styles */
+.circle-slider {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 10px solid #ccc;
+  background: conic-gradient(#ff3300 0% 50%, #00bfff 50% 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Slider input styling */
+#temp-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+/* Display the temperature value */
+.temperature-value {
+  position: absolute;
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: bold;
+  z-index: 10;
+}
 .boxstyle{
   margin-top: 3rem;
   margin-bottom: 1rem;

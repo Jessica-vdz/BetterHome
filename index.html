@@ -81,9 +81,16 @@
       </div>
       </section>
       <section class="tempslider">
+        <div class="slider-container">
+          <div class="circle-slider">
+              <input type="range" id="temp-slider" min="0" max="100" value="50">
+              <div class="temperature-value">
+                  <span id="temp-display">50°C</span>
+              </div>
+          </div>
+      </div>
       </section>
       <aside>
-
       </aside>
     </main>
   </body>  
@@ -91,5 +98,6 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="./js/charts.js"></script>
   <!-- slider -->
+   <script src="./js/temp.js"></script>
    <script src="./js/slider.js"></script>
 </html>
