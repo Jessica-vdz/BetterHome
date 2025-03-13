@@ -177,7 +177,8 @@ body{
 }
 
 #kleurslider:hover{
-  background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+  background-image: linear-gradient(-90deg, red, yellow);
+  opacity: 1;
 }
 
 .slider::-webkit-slider-thumb {
