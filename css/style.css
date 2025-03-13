@@ -36,7 +36,7 @@ body{
   font-family: Chewy;
   font-size: 2em;
 }
-#title2{
+.title2{
   margin-right: 2rem;
 }
 #date{
@@ -85,8 +85,9 @@ body{
   align-items: center;
 }
 
-.container {
+#container {
   text-align: center;
+
 }
 
 .slider {
