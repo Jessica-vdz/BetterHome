@@ -1,39 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="../Images/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="../css/style.css">
-        <title>Better Usage</title>
-    </head>
-    <body>
-        <nav role="navigation">
-            <div class="menuToggle">
-              <input type="checkbox" class="menuCheckbox" />
-              <span></span>
-              <span></span>
-              <span></span>
-              <ul class="menu">
-                <!-- 
-                        We can use a label here to close upon click (when doing same page navigation), this
-                        does require a slight bit of JS.
-                        -->
-                <li>
-                  <a href="../index.html">
-                    <label for="menuCheckbox">Home</label>
-                  </a>
-                </li>
-                <li>
-                  <a href="./pages/weather.html">Usage</a>
-                </li>
-                <li><a href="./weather.html">Weather</a></li>
-                <li><label for="menuCheckbox"><a>Contact</a></label></li>
-                <li>
-                  <a href="https://erikterwan.com/" target="_blank">About us</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-    </body>
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google embed -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+    <!-- rest of head -->
+    <link rel="shortcut icon" href="../Images/favicon.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Better Usage</title>
+  </head>
+
+  <body>
+    <nav role="navigation">
+      <div class="menuToggle">
+        <input type="checkbox" class="menuCheckbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul class="menu">
+          <!-- 
+                          We can use a label here to close upon click (when doing same page navigation), this
+                          does require a slight bit of JS.
+                          -->
+          <li>
+            <a href="../index.html">
+              <label for="menuCheckbox">Home</label>
+            </a>
+          </li>
+          <li>
+            <a href="./pages/weather.html">Usage</a>
+          </li>
+          <li><a href="./weather.html">Weather</a></li>
+          <li><label for="menuCheckbox"><a>Contact</a></label></li>
+          <li>
+            <a href="https://erikterwan.com/" target="_blank">About us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section id="content">
+      <header id="title">
+        <h1 class="title2">Better Usage</h1>
+        <figure>
+          <img src="../Images/Untitled-2.png" alt="logo">
+        </figure>
+      </header>
+      <section class="boxstyle" id="grafiek2">
+        <canvas id="myChart" height="800rem" width="600rem"></canvas>
+        </article>
+        <aside></aside>
+        <span class="graph"></span>
+      </section>
+      <section class="boxstyle" id="slider">
+        <div class="sliderstyle">
+          <h3 class="lichten">Livingroom:</h3>
+          <div class="slidecontainer">
+            <input type="range" min="0" max="100" value="0" class="slider" id="myRange">
+          </div>
+          <!--<p>Value: <span id="demo"></span>%</p>--->
+          <h3 class="lichten">Bedroom:</h3>
+          <div class="slidecontainer">
+            <input type="range" min="0" max="10" value="0" class="slider" id="myRange1">
+          </div>
+          <!--<p>Value: <span id="demo1"></span>%</p>-->
+          <h3 class="lichten">Hallway:</h3>
+          <div class="slidecontainer">
+            <input type="range" min="0" max="100" value="0" class="slider" id="kleurslider">
+          </div>
+          <!--<p>Value: <span id="demo2"></span>%</p>--->
+        </div>
+      </section>
+  </body>
+  <!-- chart -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../js/charts.js"></script>
+  <!-- slider -->
+   <script src="../js/slider.js"></script>
 </html>
