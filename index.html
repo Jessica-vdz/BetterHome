@@ -81,10 +81,13 @@
       </div>
       </section>
       <section class="tempslider" class="boxstyle">
-        <div id="container" class="boxstyle" >
-          <label for="temperature" class="slider-label">Temperatuur:</label>
-          <input type="range" id="temperature" min="-10" max="40" value="20" class="slider">
-          <span id="temperatureValue" class="value">20°C</span>
+        <div class="slider-container">
+          <div class="circle-slider" style="background: conic-gradient(rgb(200,0,0)100%,rgb(0,0,0)100%);">
+            <input type="range" id="temp-slider" min="0" max="30" value="16">
+            <div class="temperature-value">
+              <span id="temp-display">16°C</span>
+            </div>
+          </div>
         </div>
       </section>
       <aside>
@@ -95,4 +98,6 @@
   <script src="./js/charts.js"></script>
    <script src="./js/temp.js"></script>
    <script src="./js/slider.js"></script>
+   <script src="./js/tempslider.js"></script>
+
 </html>
