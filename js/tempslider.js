@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const slider = document.getElementById("temp-slider");
-    const tempDisplay = document.getElementById("temp-display");
+    const slider = document.getElementById("temp-slider1");
+    const tempDisplay = document.getElementById("temp-display1");
 
     // Update the temperature value and the slider's gradient
     slider.addEventListener("input", function() {
