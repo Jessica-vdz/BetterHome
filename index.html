@@ -80,16 +80,28 @@
         <!--<p>Value: <span id="demo2"></span>%</p>--->
       </div>
       </section>
-      <section class="tempslider">
+      <section class="tempslider" class="boxstyle">
+        <div class="slider-container">
+          <div class="circle-slider" style="background: conic-gradient(rgb(200,0,0)100%,rgb(0,0,0)100%);">
+            <input type="range" id="temp-slider1" min="0" max="30" value="16">
+            <div class="temperature-value">
+              <span id="temp-display1">16°C</span>
+            </div>
+          </div> <!--deze slider word aangestuurd door een api later-->
+          <div class="circle-slider" style="background: conic-gradient(rgb(200,0,0)100%,rgb(0,0,0)100%);">
+            <input type="range" id="temp-slider2" min="0" max="30" value="16">
+            <div class="temperature-value">
+              <span id="temp-display2">16°C</span>
+            </div>
+          </div>
+        </div>
       </section>
-      <aside>
-
-      </aside>
     </main>
   </body>  
-  <!-- chart -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="./js/charts.js"></script>
-  <!-- slider -->
+   <script src="./js/temp.js"></script>
    <script src="./js/slider.js"></script>
+   <script src="./js/tempslider.js"></script>
+
 </html>
