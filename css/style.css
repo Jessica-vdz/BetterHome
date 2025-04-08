@@ -16,7 +16,8 @@ body{
 }
 #content{
   width: 80vw;
-  margin: 20px auto;
+  margin-top:1rem ;
+  margin: 1rem auto;
   display: grid;
   grid-template-columns: 352px 352px 295px 339px 330px;
   grid-template-rows: 140px 113px 103px 51px 249px 239px;
