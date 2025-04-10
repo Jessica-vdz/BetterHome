@@ -7,6 +7,7 @@ $json = file_get_contents('php://input');
 
 if(empty($json)) {//get fetch van js
   $json = file_get_contents("jsonInput.txt");
+  header("Content-Type: application/json");
   echo $json;
 }
 else {
@@ -15,30 +16,28 @@ else {
     exit("not parsing data, data is over 1024 characters!");
   }
 
-  
+  $fileData = json_decode(file_get_contents("jsonInput.txt"));
   $data = json_decode($json);
 
-  //$filedata => zie les 6
-  if(isset($data->lights)){//uit javascript post fetch
-    $fileData->Lights= $data->ldr;
-    $fileData-> ldr =$data->ldr;
-    $fileData->dht11->temperature = $data-> dht11 -> temperature;
-    $fileData->dht11->humidity = $data->dht11->heatIndex;
-  }else{//node mcu
+  $fileData->ldr = $data->ldr;
+  $fileData->dht11->temperature = $data->dht11->temperature;
+  $fileData->dht11->temperature = $data->dht11->humidity;
+  $fileData->dht11->temperature = $data->dht11->heatIndex;
 
-    //check if lights exists if false add lights array
-    $fileData->ldr=$data->ldr;
-    $fileData->dht11->temperature = $data->dht11->temperature;
-    $fileData->dht11->temperature = $data->dht11->humidity;
-    $fileData->dht11->temperature = $data->dht11->heatIndex;
-  
+  //$filedata => zie les 6
+  if(isset($data->lights)) {
+    $fileData->lights = $data->lights;
+  } else if(!isset($fileData->lights)) {
+    $fileData->lights = array(false, false, false, false);
   }
+
+  $finalJson = json_encode($fileData);
+
   //open & write to file
   $jsonFile = fopen("jsonInput.txt", "w");
-  fwrite($jsonFile, $json . "\n");
+  fwrite($jsonFile, $finalJson . "\n");
   fclose($jsonFile);
 
-  // Send back a response
-  echo "response: " . $json;
-
+  header("Content-Type: application/json");
+  echo $finalJson;
 }?>

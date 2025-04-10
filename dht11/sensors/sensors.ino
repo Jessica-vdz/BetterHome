@@ -1,5 +1,5 @@
 #define MAX_UNSIGNED_LONG 4294967295
-#define DHT11ReadDelay 5000
+#define DHT11ReadDelay 500
 
 // GLOBAL VARIABLES
 // json
@@ -11,11 +11,23 @@ float HeatIndex = -1;
 // light sensor
 int Light = -1;
 
+class Verwarming{
+  int gang = 3;
+  int slaapkamer = 7;
+  int livingroom = 8
 
+};
 void setup() {
   Serial.begin(115200);
   SetupWifi();
   CheckWifi();
+  pinMode(D0,OUTPUT); //gang licht
+  pinMode(D2,OUTPUT); // woonkamer
+  pinMode(D1,OUTPUT); //slaapkamer
+  pinMode(D3,OUTPUT); //gang
+  pinMode(D7,OUTPUT); //gang
+  pinMode(D8,OUTPUT); //gang
+
 }
 
 void loop() {

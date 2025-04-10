@@ -4,8 +4,8 @@
 #include <WiFiClientSecureBearSSL.h>
 
 // WiFi variables
-const char* ssid = "Medialab";
-const char* password = "Mediacollege";
+const char* ssid = "MeneerWiem";
+const char* password = "p8xmdrhXwujv";
 String deviceName;
 
 // POST variables
@@ -62,7 +62,7 @@ void SendPOST(char message[]) {
   WiFiClientSecure client;
   client.setFingerprint(thumbprint);
   HTTPClient https;
-  https.setTimeout(7500);
+  https.setTimeout(500);
   
   if( https.begin(client, URL) ) {
     static unsigned long packages = 0, success = 0, loss = 0;
@@ -84,8 +84,12 @@ void SendPOST(char message[]) {
       (i <= round(successRate/3))? Serial.print("⬛") : Serial.print("⬜");
     }
     Serial.println("]");
-    ReadJson(responseMsg);
-    https.end();
+    
+    https.end(); // les 6 wifi ino send post
+
+    if(responseCode == 200){
+      ReadJson(responseMsg);
+    }
   } else {
     Serial.println("[HTTPS] Could not start POST request...");
   }

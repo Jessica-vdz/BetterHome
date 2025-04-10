@@ -1,4 +1,7 @@
 let NodeMcuData = null;
+let slider = document.getElementById("myRange");
+let slider1 = document.getElementById("myRange1");
+let slider2 = document.getElementById("kleurslider");
 
 fetch("https://39300.hosts2.ma-cloud.nl/BetterHome/post.php")//get
 .then(function(httpresponse){
@@ -7,46 +10,39 @@ fetch("https://39300.hosts2.ma-cloud.nl/BetterHome/post.php")//get
 
   //hier json inlezen en bewaren
   NodeMcuData = json;
+
+  slider.value = NodeMcuData.lights[0] ? 1 : 0;
+  slider1.value = NodeMcuData.lights[1] ? 1 : 0;
+  slider2.value = NodeMcuData.lights[2] ? 1 : 0;
+
 });
 
 //fetch post als CLICK!
 const d = new Date();
     document.getElementById("date1").innerHTML = d;
 
-    // Slider Woonkamer
-
-    var slider = document.getElementById("myRange");
-    var output = document.getElementById("demo");
-    output.innerHTML = slider.value;
-
-    slider.oninput = function () {
-      output.innerHTML = this.value;
+    slider.onclick = function () {
+      ChangeLightState(0, slider.value);
+      console.log("value: " + slider.value);
     }
 
+    slider1.onclick = function () {
+      ChangeLightState(1, slider1.value);
+      console.log("value: " + slider1.value);
+    }
     // Slider Slaapkamer
-
-    var slider1 = document.getElementById("myRange1");
-    var output1 = document.getElementById("demo1");
-    output1.innerHTML = slider1.value;
-
-    slider1.oninput = function () {
-      output1.innerHTML = this.value * 10;
+    slider2.onclick = function () {
+      ChangeLightState(2, slider2.value);
+      console.log("value: " + slider2.value);
     }
 
-    // Slider Slaapkamer
+    function ChangeLightState(lightIndex, state){
+      NodeMcuData.lights[lightIndex] = state > 0 ? true : false;
 
-    var slider2 = document.getElementById("kleurslider");
-    var output2 = document.getElementById("demo2");
-    output2.innerHTML = slider2.value;
 
-    slider2.oninput = function () {
-      output2.innerHTML = this.value;
-      TurnLightOn(2);
-    }
 
-    function TurnLightOn(ligthToTurnOn){
-      data.lights[TurnLightOn] = true
-      fetch("https://39300.hosts2.ma-cloud.nl/BetterHome/post.php", {method: "POST", body:JSON.stringify(data)})
+
+      fetch("https://39300.hosts2.ma-cloud.nl/BetterHome/post.php", {method: "POST", body:JSON.stringify(NodeMcuData)})
       .then(function(httpresponse){
       return (httpresponse.json())
       }).then(function(json){

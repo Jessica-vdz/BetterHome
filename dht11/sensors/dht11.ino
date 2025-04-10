@@ -1,7 +1,7 @@
 //DHT11
 #include "DHT.h"
 #define DHTTYPE DHT11
-uint8_t DHTPin = D5;
+uint8_t DHTPin = D4;
 DHT dht(DHTPin, DHTTYPE);
 
 
