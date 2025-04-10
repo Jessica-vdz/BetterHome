@@ -211,10 +211,11 @@ input {
 /* usage page */
 
 .wrapper{
+  margin: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap:5rem;
+  gap: 2.5rem;
 }
 
 .chartblock{
@@ -224,6 +225,27 @@ input {
   border: 3px solid black;
   border-radius: 15px;
   
+}
+
+#usagetitle{
+  grid-column-start: 1;
+  grid-column-end: 5;
+  background-color: #5fa5a5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  width:80%;
+  height: fit-content;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black;
+  padding: 1rem;
+  font-family: Chewy;
+  font-size: 2em;
+}
+
+.titlebar{
+  width: 100%;
+  justify-items: center;
 }
 
 /* sliders */
