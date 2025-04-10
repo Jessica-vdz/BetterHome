@@ -1,3 +1,12 @@
+fetch("https://39300.hosts2.ma-cloud.nl/BetterHome/post.php")//get
+.then(function(httpresponse){
+  return (httpresponse.json())
+}).then(function(json){
+
+  //hier json inlezen en bewaren
+});
+
+//fetch post als CLICK!
 const d = new Date();
     document.getElementById("date1").innerHTML = d;
 
@@ -30,3 +39,4 @@ const d = new Date();
     slider2.oninput = function () {
       output2.innerHTML = this.value;
     }
+
