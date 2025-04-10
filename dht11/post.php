@@ -15,8 +15,7 @@ else {
     exit("not parsing data, data is over 1024 characters!");
   }
 
-  // Converts it into a PHP object
-  // can be used later to read specific keys
+  
   $data = json_decode($json);
 
   //$filedata => zie les 6

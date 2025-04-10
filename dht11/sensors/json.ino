@@ -18,3 +18,6 @@ void SendJSONToSerial() {
   serializeJson(doc, Serial);
   Serial.println();
 }
+void ReadJson(String responseMsg){
+  
+}

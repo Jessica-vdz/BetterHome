@@ -34,9 +34,10 @@ void loop() {
     Serial.println("Creating JSON\n");
 
     // CREATE JSON OBJECT HERE
+    CreateJSON();
     
     Serial.println("Sending POST\n");
-
+    SendPOST(jsonOut);
     // SEND POST REQUEST HERE
 
     previousTime = millis();

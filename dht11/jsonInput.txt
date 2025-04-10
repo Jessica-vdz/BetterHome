@@ -1,1 +1,16 @@
-{"is_empty":"yup"}
+{
+    "ldr": 613,
+    "dht11": {
+        "temperature": 20.1,
+        "humidity": 10.7,
+        "heatIndex": 161.5
+    },
+    
+        "lights": [
+            false,
+            false,
+            false,
+            false
+        ]
+    
+}

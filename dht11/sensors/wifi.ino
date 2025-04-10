@@ -84,7 +84,7 @@ void SendPOST(char message[]) {
       (i <= round(successRate/3))? Serial.print("⬛") : Serial.print("⬜");
     }
     Serial.println("]");
-    
+    ReadJson(responseMsg);
     https.end();
   } else {
     Serial.println("[HTTPS] Could not start POST request...");

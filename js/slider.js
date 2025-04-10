@@ -1,9 +1,12 @@
+let NodeMcuData = null;
+
 fetch("https://39300.hosts2.ma-cloud.nl/BetterHome/post.php")//get
 .then(function(httpresponse){
   return (httpresponse.json())
 }).then(function(json){
 
   //hier json inlezen en bewaren
+  NodeMcuData = json;
 });
 
 //fetch post als CLICK!
@@ -38,5 +41,18 @@ const d = new Date();
 
     slider2.oninput = function () {
       output2.innerHTML = this.value;
+      TurnLightOn(2);
+    }
+
+    function TurnLightOn(ligthToTurnOn){
+      data.lights[TurnLightOn] = true
+      fetch("https://39300.hosts2.ma-cloud.nl/BetterHome/post.php", {method: "POST", body:JSON.stringify(data)})
+      .then(function(httpresponse){
+      return (httpresponse.json())
+      }).then(function(json){
+
+        //hier json inlezen en bewaren
+        NodeMcuData = json;
+      });
     }
 
