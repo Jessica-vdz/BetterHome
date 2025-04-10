@@ -1,4 +1,3 @@
-
 const ctx = document.getElementById('myChart');
 
 new Chart(ctx, {
@@ -32,5 +31,37 @@ new Chart(ctx, {
                 beginAtZero: true
             }
         }
+    }
+});
+
+const pie = document.getElementById('PieChart');
+
+new Chart(pie, {
+    type: 'pie',
+    data: {
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        datasets: [{
+            label: 'KW/H of usage this day',
+            data: [6, 3, 3, 5, 4, 8, 7],
+            borderColor: '#fff',
+            backgroundColor: '#bbb',
+            borderWidth: 2
+
+        },
+        {
+            label: 'KW/H light consumption',
+            data: [4, 2.5, 2, 3.5, 3, 5, 4],
+            borderColor: '#ff1',
+            backgroundColor: '#bb1',
+            borderWidth: 2
+        },
+        {
+            label: 'KW/H heater consumption',
+            data: [2, .5, 1, 1.5, 1, 3, 3],
+            borderColor: '#f1f',
+            backgroundColor: '#b1b',
+            borderWidth: 2
+        }],
+
     }
 });
