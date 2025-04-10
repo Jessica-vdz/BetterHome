@@ -29,5 +29,4 @@ void ReadJson(String responseMsg){
   digitalWrite(D0, bool(resDoc["lights"][0])); //dit registeert het lampje op array nummer 0
   digitalWrite(D1, bool(resDoc["lights"][1])); //dit registeert het lampje op array nummer 0
   digitalWrite(D2, bool(resDoc["lights"][2])); //dit registeert het lampje op array nummer 0 
-  digitalWrite(D4, bool(resDoc["lights"][3])); //dit registeert het lampje op array nummer 0
 }

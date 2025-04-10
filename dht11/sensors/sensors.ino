@@ -11,12 +11,6 @@ float HeatIndex = -1;
 // light sensor
 int Light = -1;
 
-class Verwarming{
-  int gang = 3;
-  int slaapkamer = 7;
-  int livingroom = 8
-
-};
 void setup() {
   Serial.begin(115200);
   SetupWifi();
@@ -24,16 +18,13 @@ void setup() {
   pinMode(D0,OUTPUT); //gang licht
   pinMode(D2,OUTPUT); // woonkamer
   pinMode(D1,OUTPUT); //slaapkamer
-  pinMode(D3,OUTPUT); //gang
-  pinMode(D7,OUTPUT); //gang
-  pinMode(D8,OUTPUT); //gang
-
 }
 
 void loop() {
   static unsigned long previousTime = 0;
   unsigned long currentTime = millis();
-  
+
+
   // this is separated so the LDR can work constinously
   if(currentTime - previousTime >= DHT11ReadDelay || currentTime >= MAX_UNSIGNED_LONG - DHT11ReadDelay) {
     // Clear monitor

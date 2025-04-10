@@ -35,7 +35,8 @@ const d = new Date();
       ChangeLightState(2, slider2.value);
       console.log("value: " + slider2.value);
     }
-
+ 
+    
     function ChangeLightState(lightIndex, state){
       NodeMcuData.lights[lightIndex] = state > 0 ? true : false;
 
