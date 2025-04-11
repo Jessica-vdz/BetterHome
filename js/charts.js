@@ -68,9 +68,12 @@ new Chart(pie, {
     }
 });
 
-let iets;
+let iets = 0;
 
 for (let i = 0; i < pC[0].length; i++) {
-    let verbruik = pC[0][i];
-    document.getElementById("pricecalc").innerHTML = document.getElementById("pricecalc").innerHTML +"\n"+ verbruik*3+" Euro";
+    let verbruik = pC[0][i]*3;
+    iets = iets + verbruik
+    document.getElementById("pricecalc").innerHTML = document.getElementById("pricecalc").innerHTML +"\n"+ verbruik+" Euro";
 }
+
+document.getElementById("pricetotal").innerHTML = "totaal: "+iets+" Euro";

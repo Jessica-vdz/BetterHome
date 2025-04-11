@@ -248,6 +248,15 @@ input {
   justify-items: center;
 }
 
+#pricecalc{
+  text-align: center;
+}
+
+#pricetotal{
+  text-align: center;
+  border-top: 1.5px solid whitesmoke;
+}
+
 /* sliders */
 
 .sliderstyle{
