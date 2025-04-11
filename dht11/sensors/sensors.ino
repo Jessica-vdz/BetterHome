@@ -23,9 +23,8 @@ void setup() {
 void loop() {
   static unsigned long previousTime = 0;
   unsigned long currentTime = millis();
+  ZonneWaarde();
 
-
-  // this is separated so the LDR can work constinously
   if(currentTime - previousTime >= DHT11ReadDelay || currentTime >= MAX_UNSIGNED_LONG - DHT11ReadDelay) {
     // Clear monitor
     Serial.print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");

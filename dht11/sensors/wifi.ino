@@ -4,8 +4,8 @@
 #include <WiFiClientSecureBearSSL.h>
 
 // WiFi variables
-const char* ssid = "MeneerWiem";
-const char* password = "p8xmdrhXwujv";
+const char* ssid = "Medialab";
+const char* password = "Mediacollege";
 String deviceName;
 
 // POST variables
