@@ -1,7 +1,9 @@
+
+let height = document.getElementById("slider-container");
 function getWeather() {
     const apiKey = '0c0f8cd9b522f66a3289dd780a91d601';
     const city = document.getElementById('city').value;
-
+     height.style.height = "400px";
     if (!city) {
         alert('Please enter a city');
         return;
@@ -36,6 +38,7 @@ function displayWeather(data) {
     const weatherInfoDiv = document.getElementById('weather-info');
     const weatherIcon = document.getElementById('weather-icon');
     const hourlyForecastDiv = document.getElementById('hourly-forecast');
+
 
     // Clear previous content
     weatherInfoDiv.innerHTML = '';
