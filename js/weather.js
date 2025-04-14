@@ -3,7 +3,8 @@ let height = document.getElementById("slider-container");
 function getWeather() {
     const apiKey = '0c0f8cd9b522f66a3289dd780a91d601';
     const city = document.getElementById('city').value;
-     height.style.height = "400px";
+     height.style.height = "fit-content";
+     height.style.padding ="10px";
     if (!city) {
         alert('Please enter a city');
         return;
@@ -98,5 +99,5 @@ function displayHourlyForecast(hourlyData) {
 
 function showImage() {
     const weatherIcon = document.getElementById('weather-icon');
-    weatherIcon.style.display = 'block'; // Make the image visible once it's loaded
+    weatherIcon.style.display = 'block';
 }

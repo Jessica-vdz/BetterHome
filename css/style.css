@@ -46,31 +46,14 @@ body{
   max-height: 420px;
 }
 #date{
-  width: 100%;
+  width: 60%;
 }
 #grafiek{
   width: 40rem;
   height: 25rem;
 }
-#grafiek2{
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 3;
-  grid-row-end: 6;
-  width: 30rem;
-  height: 35rem;
-}
-#slider{
-  width: 10rem;
-  max-height: 25rem;
-  display: flex;
-  justify-content: space-evenly;
-   
-}
 
-#tempslider{
-  width: 25rem;
-}
+
 #slider-container {
   padding: 4rem;
   position: relative;
@@ -87,54 +70,7 @@ body{
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black;
   font-size: 18px;
 }
-.circle-slider {
-  position: relative;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  border: 1px solid #fff;
-  background: conic-gradient(#ff3300 0% 50%, #00bfff 50% 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#temp-slider1 {
-  position: absolute;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  cursor: pointer;
-  border-radius: 50%;
-  color: #fff;
-}
-#temp-slider2 {
-  position: absolute;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  cursor: pointer;
-  border-radius: 50%;
-  color: #fff;
-}
-input {
-  width: calc(100% - 16px);
-  padding: 8px;
-  box-sizing: border-box;
-  border-radius: 10px;
-  border: 1px solid white;
-  margin-top: 20px;
-}
-.temperature-value {
-  position: absolute;
-  font-size: 1.5rem;
-  color: #fff;
-  font-weight: bold;
-  z-index: 10;
-}
+
 #container {
   text-align: center;
 
@@ -177,6 +113,7 @@ input {
 
 .boxstyle{
   margin-top: 2rem;
+  margin-left: 1rem;
   background-color: #5fa5a5;
   width: fit-content;
   height: fit-content;
@@ -206,10 +143,11 @@ input {
 }
 
 .chartblock{
-  width: 30rem;
-  height: 30rem;
+  padding: 1rem;
+  width: 25rem;
+  height: 25rem;
   background-color: #5fa5a5;
-  border: 3px solid black;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black;
   border-radius: 15px;
   align-content: center;
 }
@@ -249,7 +187,6 @@ input {
   margin: 2rem;
 }
 
-/* sliders */
 
 .sliderstyle{
   margin: 1rem;
