@@ -31,11 +31,12 @@ body{
   height: fit-content;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black;
   padding: 1rem;
-  font-family: Chewy;
+  font-family: "MyCustomFont";
   font-size: 2em;
 }
 .title2{
   margin-right: 2rem;
+  font-size: 2em;
 }
 .flex{
   margin: auto;
@@ -52,8 +53,6 @@ body{
   width: 40rem;
   height: 25rem;
 }
-
-
 #slider-container {
   padding: 4rem;
   position: relative;
@@ -152,21 +151,6 @@ body{
   align-content: center;
 }
 
-#usagetitle{
-  grid-column-start: 1;
-  grid-column-end: 5;
-  background-color: #5fa5a5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 1rem;
-  width:80%;
-  height: fit-content;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black;
-  padding: 1rem;
-  font-family: Chewy;
-  font-size: 2em;
-}
 
 .titlebar{
   width: 100%;
