@@ -1,61 +1,64 @@
 <DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- google embed -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
-    <!-- rest of head -->
-    <link rel="stylesheet" href="../css/style.css" defer>
-    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
-    <script src="/js/all.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <title>Better Home</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="shortcut icon" href="../Images/favicon.ico" type="image/x-icon">
+      <link rel="stylesheet" href="../css/style.css">
+      <title>Better Usage</title>
   </head>
-
   <body>
-    <nav role="navigation">
-      <div class="menuToggle">
-        <input type="checkbox" class="menuCheckbox" />
-        <span></span>
-        <span></span>
-        <span></span>
-        <ul class="menu">
-          <!-- 
-                  We can use a label here to close upon click (when doing same page navigation), this
-                  does require a slight bit of JS.
-                  -->
-          <li>
-            <a href="../index.html">
-              <label for="menuCheckbox">Home</label>
-            </a>
-          </li>
-          <li>
-            <a href="../BetterHome/pages/usage.html">Usage</a>
-          </li>
-          <li>
-            <a href="../pages/aboutus.html">About us</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <section id="content">
-      <header id="title">
-        <h1 class="title2">Better Usage</h1>
-        <figure>
-          <img src="../Images/BetterUsage.png" alt="logo">
-        </figure>
-      </header>
-      <main>
-        
-      </main>
-  </body>  
+      <nav role="navigation">
+          <div class="menuToggle">
+            <input type="checkbox" class="menuCheckbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul class="menu">
+              <li>
+                <a href="../index.html">
+                  <label for="menuCheckbox">Home</label>
+                </a>
+              </li>
+              <li>
+                <a href="./pages/weather.html">Usage</a>
+              </li>
+              <li><a href="./weather.html">Weather</a></li>
+              <li>
+                <a href="https://erikterwan.com/" target="_blank">About us</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="titlebar">
+          <header id="usagetitle">
+            <h1 class="title2">Better Home</h1>
+            <figure>
+              <img src="../Images/Untitled-2.png" alt="logo">
+            </figure>
+          </header>
+        </div>
+        <div class="wrapper">
+          <div class="chartblock">
+            <canvas id="myChart" height="400" width="400"></canvas>
+          </div>
+          <div class="chartblock">
+            <canvas id="PieChart" height="400" width="400"></canvas>
+          </div>
+          <div class="chartblock">
+            <div class="thisweek">
+              <H4 id="pricecalc"></H4>
+              <H3 id="pricetotal"></H3>
+            </div>
+            <div class="thisweek">
+              <H3 id="pricetotalold"></H3>
+            </div>
+            <div class="thisweek">
+              <H3 id="pricedifference"></H3>
+            </div>
+          </div>
+        </div>
+  </body>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="./js/charts.js"></script>
-   <script src="./js/temp.js"></script>
-   <script src="./js/slider.js"></script>
-   <script src="./js/tempslider.js"></script>
-
+  <script src="../js/charts.js"></script>
 </html>
