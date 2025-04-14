@@ -33,8 +33,8 @@ void loop() {
   Serial.println(ldr_value);  // Print de LDR-waarde naar de seriële monitor
 
   // Controleer de lichtwaarde en pas de servo aan
-  if (ldr_value > 510) {
-    servo.write(90);  // Als de lichtwaarde boven 341 is, zet de servo op 90°
+  if (ldr_value > 710) {
+    servo.write(40);  // Als de lichtwaarde boven 341 is, zet de servo op 90°
   } else {
     servo.write(180);   // Als de lichtwaarde onder 341 is, zet de servo op 0°
   }
