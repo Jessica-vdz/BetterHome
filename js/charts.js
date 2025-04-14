@@ -1,3 +1,7 @@
+function Textinside(ID, text) {
+    document.getElementById(ID).innerText = text;
+}
+
 const ctx = document.getElementById('myChart');
 
 new Chart(ctx, {
@@ -69,11 +73,16 @@ new Chart(pie, {
 });
 
 let iets = 0;
+let oud = 120;
 
 for (let i = 0; i < pC[0].length; i++) {
     let verbruik = pC[0][i]*3;
     iets = iets + verbruik
-    document.getElementById("pricecalc").innerHTML = document.getElementById("pricecalc").innerHTML +"\n"+ verbruik+" Euro";
+    document.getElementById("pricecalc").innerText = document.getElementById("pricecalc").innerText+"\n"+verbruik+" Euro";
 }
 
-document.getElementById("pricetotal").innerHTML = "totaal: "+iets+" Euro";
+let verschil = oud-iets;
+
+Textinside("pricetotal", "estimated bill this week: "+iets+" Euro");
+Textinside("pricetotalold", "estimated bill last week: "+oud+" Euro");
+Textinside("pricedifference", "saved compared to last week: "+verschil+" Euro");

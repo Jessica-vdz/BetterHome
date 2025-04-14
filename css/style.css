@@ -224,7 +224,7 @@ input {
   background-color: #5fa5a5;
   border: 3px solid black;
   border-radius: 15px;
-  
+  align-content: center;
 }
 
 #usagetitle{
@@ -254,7 +254,12 @@ input {
 
 #pricetotal{
   text-align: center;
-  border-top: 1.5px solid whitesmoke;
+  border-top: 2px solid whitesmoke;
+}
+
+.thisweek{
+  text-align: center;
+  margin: 2rem;
 }
 
 /* sliders */
