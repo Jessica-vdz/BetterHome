@@ -1,0 +1,64 @@
+<DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="shortcut icon" href="../Images/favicon.ico" type="image/x-icon">
+      <link rel="stylesheet" href="../css/style.css" defer>
+      <title>Better Usage</title>
+  </head>
+  <body>
+      <nav role="navigation">
+          <div class="menuToggle">
+            <input type="checkbox" class="menuCheckbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul class="menu">
+              <li>
+                <a href="../index.html">
+                  <label for="menuCheckbox">Home</label>
+                </a>
+              </li>
+              <li>
+                <a href="./pages/weather.html">Usage</a>
+              </li>
+              <li>
+                <a href="./aboutus.html">About us</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div id="content">
+          <header id="title">
+            <h1 class="title2">Better Usage</h1>
+            <figure>
+              <img src="../Images/BetterUsage.png" alt="logo">
+            </figure>
+          </header>
+        
+        <div class="wrapper">
+          <div class="chartblock">
+            <canvas id="myChart" height="300" width="300"></canvas>
+          </div>
+          <div class="chartblock">
+            <canvas id="PieChart" height="300" width="300"></canvas>
+          </div>
+          <div class="chartblock">
+            <div class="thisweek">
+              <H4 id="pricecalc"></H4>
+              <H3 id="pricetotal"></H3>
+            </div>
+            <div class="thisweek">
+              <H3 id="pricetotalold"></H3>
+            </div>
+            <div class="thisweek">
+              <H3 id="pricedifference"></H3>
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../js/charts.js"></script>
+</html>

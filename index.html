@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google embed -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+    <!-- rest of head -->
+    <link rel="stylesheet" href="./css/style.css" defer>
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
+    <script src="./js/all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Better Home</title>
+  </head>
+
+  <body>
+    <nav role="navigation">
+      <div class="menuToggle">
+        <input type="checkbox" class="menuCheckbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul class="menu">
+          <li>
+            <a href="./index.html">
+              <label for="menuCheckbox">Home</label>
+            </a>
+          </li>
+          <li>
+            <a href="./pages/usage.html">Usage</a>
+          </li>
+          <li>
+            <a href="./pages/aboutus.html">About us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section id="content">
+      <header id="title">
+        <h1 class="title2">Better Home</h1>
+        <figure>
+          <img src="./Images/Untitled-2.png" alt="logo">
+        </figure>
+      </header>
+      <section class="boxstyle" id="date">
+        <h3 id="date1"></h3>
+      </section>
+      <section class="flex">
+      <section class="boxstyle" id="grafiek">
+        <canvas id="myChart" height="400rem" width="650px"></canvas>
+        </article>
+        <aside></aside>
+        <span class="graph"></span>
+      </section>
+      <section class="boxstyle" id="slider">
+        <div class="sliderstyle">
+        <h3 class="lichten">Hallway:</h3>
+        <div class="slidecontainer">
+          <input type="range" min="0" max="1" value="0" class="slider" id="myRange">
+        </div>
+        <h3 class="lichten">Bedroom:</h3>
+        <div class="slidecontainer">
+          <input type="range" min="0" max="1" value="0" class="slider" id="myRange1">
+        </div>
+        <h3 class="lichten">Livingroom:</h3>
+        <div class="slidecontainer">
+          <input type="range" min="0" max="1" value="0" class="slider" id="kleurslider">
+        </div>
+      </div>
+      </section>
+
+        <div id="slider-container" class="boxstyle">
+          <h1 class="title2" style="display: flex; align-items: center; justify-content: center;">Better Weather<figure style="margin-left: 1rem;"><img src="./Images/BetterWheater.png" alt="blank" style="width:100px; height:125px"></figure></h1>
+          <input type="text" id="city" placeholder="Enter city">
+          <button onclick="getWeather()">Search</button>
+  
+          <img id="weather-icon" alt="Weather Icon">
+  
+          <div id="temp-div"></div>
+  
+          <div id="weather-info"></div>
+  
+          <div id="hourly-forecast"></div>
+      </div>
+    </div>
+        </div>
+      </section>
+    </main>
+  </body>  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./js/charts.js"></script>
+   <script src="./js/slider.js" defer></script>
+   <script src="./js/weather.js"></script>
+</html>
