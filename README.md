@@ -18,24 +18,18 @@ I worked on different parts of the project, including the frontend and the integ
 
 ## Tech Stack
 
+**Hardware**
+- Esp32
+- 3 Led's
+- solar panels
+- servo
+- ldr
+
+**Software**
 - **HTML** — Structuring the website.
 - **CSS** — Styling the frontend.
 - **JavaScript** — Implementing interactive functionality.
 - **Hardware:** Lights and a DHT11 sensor.
-
-## What I Learned
-
-This project helped me gain practical experience with web development and hardware integration. During the project, I learned more about:
-
-- Building web pages using HTML and CSS.
-- Using JavaScript to add functionality to a website.
-- Organizing a project with multiple pages and components.
-- Working with hardware components and sensors.
-- Exploring how software and hardware can work together.
-
-## Project Goal
-
-The main goal of this project was to improve my web development skills and explore the possibilities of combining a website with physical hardware. It gave me the opportunity to work on different aspects of development and gain experience with technologies beyond frontend development.
 
 ## Demo
 
